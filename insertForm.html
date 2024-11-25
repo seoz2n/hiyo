@@ -7,6 +7,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function check(){
+if(insertForm.subject.value.length == 0){
+alert("제목이 누락됐습니다.");
+insertForm.subject.focus(); // 포커스를 이동시켜 바로 아이디를 입력할 수 있게
+return false;
+}
+}
+</script>
 </head>
 <body>
 <div class="container"><br>
@@ -27,6 +36,9 @@
 <div class="form-group">
 <label for="writer">writer :</label>
 <input type="text" class="form-control" id="writer" name="writer">
+</div>
+<div class="text-center">
+<button type="submit" class="btn btn-secondary" onclick="return check()">등록</button>
 </div>
 </form>
 </div>
